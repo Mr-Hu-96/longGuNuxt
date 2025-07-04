@@ -29,6 +29,9 @@ importers:
       pinia:
         specifier: ^3.0.3
         version: 3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))
+      pinia-plugin-persistedstate:
+        specifier: ^4.4.1
+        version: 4.4.1(@nuxt/kit@3.17.6(magicast@0.3.5))(@pinia/nuxt@0.11.1(magicast@0.3.5)(pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))))(pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))
       sass:
         specifier: ^1.89.2
         version: 1.89.2
@@ -1593,6 +1596,9 @@ packages:
   decache@4.6.2:
     resolution: {integrity: sha512-2LPqkLeu8XWHU8qNCS3kcF6sCcb5zIzvWaAHYSvPfwhdd7mHuah29NssMzrTYyHN4F5oFy2ko9OBYxegtU0FEw==}
 
+  deep-pick-omit@1.2.1:
+    resolution: {integrity: sha512-2J6Kc/m3irCeqVG42T+SaUMesaK7oGWaedGnQQK/+O0gYc+2SP5bKh/KKTE7d7SJ+GCA9UUE1GRzh6oDe0EnGw==}
+
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
@@ -2734,6 +2740,20 @@ packages:
   picomatch@4.0.2:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
+
+  pinia-plugin-persistedstate@4.4.1:
+    resolution: {integrity: sha512-lmuMPpXla2zJKjxEq34e1E9P9jxkWEhcVwwioCCE0izG45kkTOvQfCzvwhW3i38cvnaWC7T1eRdkd15Re59ldw==}
+    peerDependencies:
+      '@nuxt/kit': '>=3.0.0'
+      '@pinia/nuxt': '>=0.10.0'
+      pinia: '>=3.0.0'
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+      '@pinia/nuxt':
+        optional: true
+      pinia:
+        optional: true
 
   pinia@3.0.3:
     resolution: {integrity: sha512-ttXO/InUULUXkMHpTdp9Fj4hLpD/2AoJdmAbAeW2yu1iy1k+pkFekQXw5VpC0/5p51IOR/jDaDRfRWRnMMsGOA==}
@@ -5474,6 +5494,8 @@ snapshots:
     dependencies:
       callsite: 1.0.0
 
+  deep-pick-omit@1.2.1: {}
+
   deepmerge@4.3.1: {}
 
   default-browser-id@5.0.0: {}
@@ -6732,6 +6754,16 @@ snapshots:
   picomatch@2.3.1: {}
 
   picomatch@4.0.2: {}
+
+  pinia-plugin-persistedstate@4.4.1(@nuxt/kit@3.17.6(magicast@0.3.5))(@pinia/nuxt@0.11.1(magicast@0.3.5)(pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))))(pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))):
+    dependencies:
+      deep-pick-omit: 1.2.1
+      defu: 6.1.4
+      destr: 2.0.5
+    optionalDependencies:
+      '@nuxt/kit': 3.17.6(magicast@0.3.5)
+      '@pinia/nuxt': 0.11.1(magicast@0.3.5)(pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))
+      pinia: 3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))
 
   pinia@3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)):
     dependencies:
