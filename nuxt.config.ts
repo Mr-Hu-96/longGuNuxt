@@ -6,10 +6,16 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   vite: {
+     css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/scss/main.scss" as *;'
+        }
+      }
+    },
     plugins: [
       tailwindcss(),
     ],
   },
-
-  modules: ['@ant-design-vue/nuxt'],
+  modules: ['@ant-design-vue/nuxt','@pinia/nuxt'],
 })
