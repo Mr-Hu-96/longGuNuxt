@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     ],
   },
   modules: ['@ant-design-vue/nuxt','@pinia/nuxt'],
+  runtimeConfig: {
+    public: {
+      apiBase: 'https://api.longgu.com/api' // 可用 process.env.API_BASE 注入
+    }
+  },
 })

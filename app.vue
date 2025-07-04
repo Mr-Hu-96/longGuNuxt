@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, watch, computed } from "vue";
 import type { MenuProps } from "ant-design-vue";
-
+import { useUserApi } from "~/api/user"
+import {useAccessStore} from "~/stores/access"
+const userApi = useUserApi()
 const current = ref<string[]>(["mail"]);
 const items = ref<MenuProps["items"]>([
   {
@@ -30,7 +32,13 @@ const links = [
   "东方财富网",
   "经济网",
 ];
-
+const useAccess = useAccessStore()
+userApi.mobileLogin({mobile: '13660588996', captcha: '6666'}).then(res=>{
+  console.log(res,res.data.userinfo?.token);
+  
+  useAccess.setAccessToken(res.data.userinfo?.token)
+  userApi.getUserInfo()
+})
 
 const searchValue = ref("");
 
