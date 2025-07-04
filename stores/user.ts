@@ -18,13 +18,7 @@ export const useUserStore = defineStore('core-user', {
         setInviteCode(inviteCode: string | null) {
             this.inviteCode = inviteCode
         },
-        async getUserInfo() {
-            if (this.userInfo === null) {
-                const res = await getUserInfoApi()
-                this.setUserInfo(res)
-            }
-            return this.userInfo;
-        }
+
 
     },
     state: (): AccessState => ({

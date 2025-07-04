@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, computed } from "vue";
 import type { MenuProps } from "ant-design-vue";
-import { useCounterStore } from "~/stores/user";
+
 const current = ref<string[]>(["mail"]);
 const items = ref<MenuProps["items"]>([
   {
@@ -31,7 +31,7 @@ const links = [
   "经济网",
 ];
 
- const useCounter = useCounterStore()
+
 const searchValue = ref("");
 
 const router = useRouter();
